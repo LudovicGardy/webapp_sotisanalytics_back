@@ -55,8 +55,8 @@ db = firestore.client()
 app = Flask(__name__)
 
 ### Cross-origin
-#CORS(app)  # Cette ligne est importante pour permettre à notre serveur d'accepter les requêtes cross-origin
-CORS(app, origins=['http://localhost:3000']) # Limite les requêtes cross-origin aux origines spécifiées, ce qui peut être une bonne pratique pour la sécurité une fois que vous avez déployé votre application en production.
+CORS(app)  # Cette ligne est importante pour permettre à notre serveur d'accepter les requêtes cross-origin
+# CORS(app, origins=['http://localhost:3000']) # Limite les requêtes cross-origin aux origines spécifiées, ce qui peut être une bonne pratique pour la sécurité une fois que vous avez déployé votre application en production.
 
 ### Note: la connexion au backend ne fonctionne pas si je lance 
 ### L'appli react en localhost. Mais une fois déployée, ça fonctionne.
