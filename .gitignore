@@ -1,1 +1,7 @@
-.procedure.md
+env/
+notebooks/
+_archives/
+.env
+*.txt
+*.md
+.DS_store
