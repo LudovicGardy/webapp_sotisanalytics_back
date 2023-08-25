@@ -1,11 +1,13 @@
 #conda activate flask_env
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 import numpy
 from dotenv import load_dotenv, dotenv_values
 import os
 from firebase_admin import credentials, initialize_app, firestore
+from datetime import datetime
+import platform
 
 # Utilisez un fichier d'informations d'identification pour initialiser Firebase
 # cred = credentials.Certificate('firestore-key.json')
@@ -24,7 +26,7 @@ try:
     "token_uri": config['TOKEN_URI'],
     "auth_provider_x509_cert_url": config['AUTH_PROVIDER_X509_CERT_URL'],
     "client_x509_cert_url": config['CLIENT_X509_CERT_URL']
-}
+    }
 except Exception as e:
     # Récupérez les valeurs à partir des variables d'environnement
     print("No file .env was found :", str(e))
@@ -65,18 +67,58 @@ CORS(app)  # Cette ligne est importante pour permettre à notre serveur d'accept
 def hello():
     return "Hello World"
 
-@app.route('/api/comment', methods=['POST'])
-def handle_submit():
+def check_origin(origin):
+    # Liste des origines autorisées
+    allowed_origins = [
+        "http://www.sotisanalytics.com",
+        "https://www.sotisanalytics.com",
+        "http://sotisanalytics.com",
+        "https://sotisanalytics.com",
+        "http://www.sotisanalytics.fr",
+        "https://www.sotisanalytics.fr",
+        "http://sotisanalytics.fr",
+        "https://sotisanalytics.fr"
+    ]
+
+    # Vérifiez si l'origine est dans la liste des origines autorisées
+    if origin in allowed_origins or platform.node() == "MacBookPro-LudovicGardy.local":
+        allow = True
+        print(f"Success: <{origin}>.")
+    else:
+        allow = False
+        print(f"Origin not allowed: <{origin}>. \nProcess aborted.")
+
+    return(allow)
+
+@app.route('/api/submitTestimonial', methods=['POST'])
+def submit_testimonial():
+
+    # Obtenez l'origine de la requête
+    origin = request.headers.get('Origin')
+    allow = check_origin(origin)
+    if not allow:
+        abort(403)  # Forbidden
+
     data = request.get_json()
-    print(f'Nom: {data["name"]}')
-    print(f'Email: {data["email"]}')
-    print(f'Commentaire: {data["comment"]}')
+    name = data["name"]
+    email = data["email"]
+    comment = data["comment"]
+
+    # Obtenez la date et l'heure actuelles au format souhaité
+    date_hour = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+
+    # Créez une référence à la sous-collection basée sur la date et l'heure
+    doc_ref = db.collection('testimonials_submited').document(date_hour)
+
+    # Ajoutez les données dans la sous-collection
+    doc_ref.set({
+        'name': name,
+        'email': email,
+        'comment': comment
+    })
 
     random_number = numpy.random.randint(100)
-    print("hello", random_number)
-
-    return jsonify({"message": "Comment received", "random_number": random_number}), 200
-
+    return jsonify({"message": "Testimonial submitted successfully", "random_number": random_number}), 200
 
 @app.route('/api/getData', methods=['GET'])
 def get_data():
@@ -86,6 +128,9 @@ def get_data():
 
     # Transformez les données en format JSON
     result = [item.to_dict() for item in data]
+
+    print("----")
+    print(result)
 
     return jsonify(result), 200
 
