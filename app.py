@@ -117,6 +117,11 @@ def submit_testimonial():
         'comment': comment
     })
 
+    print("\nTestimonials submission: ")
+    print(name)
+    print(email)
+    print(comment)
+
     random_number = numpy.random.randint(100)
     return jsonify({"message": "Testimonial submitted successfully", "random_number": random_number}), 200
 
