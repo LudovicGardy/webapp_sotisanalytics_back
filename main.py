@@ -127,17 +127,20 @@ def submit_testimonial():
 
 @app.route('/api/getData', methods=['GET'])
 def get_data():
-    # Récupérez les données de Firestore
-    data_ref = db.collection('testimonials')
-    data = data_ref.get()
+    # # Récupérez les données de Firestore
+    # data_ref = db.collection('testimonials')
+    # data = data_ref.get()
 
-    # Transformez les données en format JSON
-    result = [item.to_dict() for item in data]
+    # # Transformez les données en format JSON
+    # result = [item.to_dict() for item in data]
 
-    print("----")
-    print(result)
+    # print("----")
+    # print(result)
 
-    return jsonify(result), 200
+    # return jsonify(result), 200
+
+    return "TESTTT"
+
 
 if __name__ == '__main__':
     # app.run(debug=True) # Si pas docker
