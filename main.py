@@ -140,4 +140,8 @@ def get_data():
     return jsonify(result), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # app.run(debug=True) # Si pas docker
+
+    # This is used when running locally only. When deploying to Google App
+    # Engine, a webserver process such as Gunicorn will serve the app.
+    app.run(host='0.0.0.0', port=8000, debug=True) # Si Docker
