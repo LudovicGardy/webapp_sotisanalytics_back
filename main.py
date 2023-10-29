@@ -19,7 +19,7 @@ try:
     "type": "service_account",
     "project_id": config['PROJECT_ID'],
     "private_key_id": config['PRIVATE_KEY_ID'],
-    "private_key": f"-----BEGIN PRIVATE KEY-----\n{config['PRIVATE_KEY']}\nhuL2EZiNDdt9MnjoNX8YT8KHef0y9oX7CkEki9xp3YdDQSH4rYOHf37RueJSHB2o\nw0cqEL3lGaiIwSaYTa2mt6rvWkUyGDIWu02viA6aybTbTJQYMpStxOKg31XtHCPs\nILD23pe1cUHKEhNozKvShTFuRCjyNekdHy7MfiF5oU9nMdZtG0J92VzgzY/GoMh7\nc+q9sduL2fwc1+1Bs9DWPaPkRF1J2NZuBPGM8zf24VzLSH4MSBUECt8b5gJK4aQ/\nqB1wpx370JtplWO4mxwnvIet+xrU78GjqHAt74HaX4BeFx91+zHoZEFWCa+cKZf6\n7bFP4+NpAgMBAAECggEACVjv9yKEtQfS2Fl5ufZCnSk279JXaEP0a6IP87Y/i00x\nyjWEbvBtff038hS4wzoFE1vduaAwE47lJCJQjEFIuvQ5pqnmIfcCP1Y9+pqYf159\nT+7uNN1AWryvIJFGy5roV4jTsd+p2qkJ0FEMwf84Yz5w9sZ9MHMNtEGgTehSbXEo\nYRceMqz+DtbjEl5dHt5aLxrhembUDB1kbIaSzd5Up15oSfevQxq9QQE76905XijS\nj+2O0K+BPC2Nw15x5z2cQ6PashQix4Z9eKHDheMXhBFxpVTO72oSyCik274p92h8\nCvvg1Pt+M7hL3AuKaTKbMQ+vzDyUrVnBMOXAfkIyQQKBgQD1XCjebwIRh52ArYzu\nDQhVzpYHMAfu8mme3RL1ANxlb9T421qC92nQ4CFv6C1lCwxaQ36Co0mV14MdD3G+\ngeDin/6C+QO1JNg+EpMqsyPBaIBvalfRErUpnhVVVJLHgBXOx3frdOKYAV/6HSnz\n45zkgnit9dKjpEw4UhZYP3mkMQKBgQDeW4Y1IaohJhMiMff0x0BLoBKcsJxxaP5t\ntihgyqulbTD+acqb3st1rPMFFiBjqSmqXYuTt4nYp6Wt83twQvoClp+LY1VKBGSY\nhzBGiAXi3LOK6M0+6avdDcdYbpoAdKZX5nucjvxVAtsjAvNGUA/8He1HxYfJUE5u\nKaAkHhz8uQKBgHVFo1MNg9OVGjbSvLVbDUzV/OdakbAntUv1JoZr7uuc1BJN5akL\nUExBlDnEo03URgcuk10lZppz83sEUr1XnoEzL5ayJo+CGMkyX5zdGo3qwNh/35FS\ne7x0joXGcpFgKww2Up77swIsRg9puQ+VDvw5UCz1fcQxVyzkL0HmtOFBAoGAf09h\nyPvsX6xgGh0H/fMzIdmVrncEK37U5dX8ymZf3ohlG9VQduwaC9cpEUl44/bP70Y+\nCyZz20Mpfi5BB6ahZGf/ExydkZJwUlBc2JU64YhBmA/wq8u4ZglkkIJK1GX1c7B4\nJ8xKNxY6h5JB3YkrjctItuYm96FuNm7IzMUdDakCgYEA6FFMfzqtsuvr9aUFAtJF\nyCC03JCuhYTlWhv/aP0oe1PYkRQKLdVX7UGXhp6Hw61evMt3UHbatXFX/s/v66MF\netmb3T5sOLXjRoTbmMRh1XHCbTuvanvJhOw3569SVSuTzNS8nZlgy/pj4vFPBFYC\ncQtYyfJ3tdCHKcggw/McvOs=\n-----END PRIVATE KEY-----\n",
+    "private_key": f"-----BEGIN PRIVATE KEY-----\n{config['PRIVATE_KEY']}\nPLM7lHi2Xo7i+CloZ8KOzwaS0KV+3xdtwFUDOIXO3BVLQdror6ouWlAw08TCtFC/\ns9II6ugraSWUZxV/O1qKxHca45meUXd/AzJusQA0JOmW+k7Ocm7Ym27HzTccXPi7\n7MABSsOKzBpiWa8HqeOKPk1yjupy8AzLa5OH9YaY0Dyq1aKj7N3Su6MhRu+ucUUm\nfifwTlUXTEWeJHtYvKj/Utr6ViZZG4s8ghozI7ShebBACzS5K1Vomlvb4rISVFt0\nhxMvujZaWDtRG17PEQLR8dzzExV8ZSbO60WrV9EycJEen6c2FeYjM6Nbi6X7/pzN\nUTYotzzbAgMBAAECggEAHGKdG6d3848UEqCNNM1yHZAnu5v+QeiMQmPOekfLiV3i\nQG5c1b4Twqs6H7zU1jZNv07sdEGxydIa75Jvr0uxRuu3FnCPogrl3bpVxFzVTnEZ\nUirLnY+h1AnMcD13g/3g5LbespsyT0ZGssNTUGoHHaSAeCDdvvQYyLiJMGekvy/P\n/6/01LIbb+Kdc0Gx544xn/FoSpezvh7t0EqbWSM1Nptz+WGRQ5LPBRVEBrc5QcPe\npctBeSweMhvSuycWlG2tmhofgu0T30wYPgeyPP2+uzBH6+3HaqaRD6mucxq/L0hB\nkcx1kvpviLNUM+gLFwTWUfO80ObeIaSsbNrBkVzjYQKBgQDSn9RhUOrK/UZJzXN6\nEVjwx3rFKVwPLuag2YiHuWdTnQswGeJJjIDh2mcldHWn6MGSuZu6FdP+rSbcf1xw\nzRDVnaPQuVnT1GjIPKPtglCkxeU70lx/0lTX75dCquDmqZXMVkf46pvDQGdrBpCF\ngyhRvKIHfevznI1G6qwKFH1JeQKBgQC6CIrtMuTRDMXIHAr5qPHXmVKjqn1tKStF\nEe6ZL07WzsmEoKlDbLCqSkfQvJ1NrZ8Bs68UUhqaZjCaZgf+cg8VF5icTNvhuv4/\nIdCFlXwxuTQ08tnuBGb+paJ3o0oauo6hPenfyN1dii1GIDnz7XwbJTAc7SzMGeAq\n7TxwHC238wKBgCC2qGLxEXazve4Klgv4k8raAMyMrvrAuxtyjg0ek9jdxHYVHxtz\nUjVCGdEsdHW+5gnnADP33fRpambG9VGj2CCFmoL5tuT60cd/+6oRGnttLTyMYMeN\noJXlZaX6KnJJFrYlFIqpzcWWxDlQTLQf+ewwEy58tWAiCaNhIZVzNz5pAoGAJ7qj\nULzJuQttQasbfO3jmBOaXnGOj713DC0kM3qy75UB3F0jSM7xe6yZYa6mOWyWxJpH\nDaPrIoYoYxDfLCvXpL2BTf/sBW0V1w21ppGiEExpJdWnTPmLtV5SMBKjRMoKo8zB\nIZWYEN3thUhkl/9jvbhXahYMtxnfkctQWPDropkCgYBKqYctlRbQjNbs5tODL1CY\nZ8ittP1q9WGG49KvqyavfKXnFvdMT8YBbxgb9HXm2udOVoilCT0O/kWo5mqXa0G3\ndzCEgsC+0IIelp8gxkp+NDt68Aj30FAxRA995ypHIz0ZaRB2d+KA1XIYuzWTkuf6\nQ7zSmByx8VarrC2lwWSgHA==\n-----END PRIVATE KEY-----\n",
     "client_email": config['CLIENT_EMAIL'],
     "client_id": config['CLIENT_ID'],
     "auth_uri": config['AUTH_URI'],
@@ -36,7 +36,7 @@ except Exception as e:
         "type": "service_account",
         "project_id": os.environ.get('PROJECT_ID'),
         "private_key_id": os.environ.get('PRIVATE_KEY_ID'),
-        "private_key": f"-----BEGIN PRIVATE KEY-----\n{os.environ.get('PRIVATE_KEY')}\nhuL2EZiNDdt9MnjoNX8YT8KHef0y9oX7CkEki9xp3YdDQSH4rYOHf37RueJSHB2o\nw0cqEL3lGaiIwSaYTa2mt6rvWkUyGDIWu02viA6aybTbTJQYMpStxOKg31XtHCPs\nILD23pe1cUHKEhNozKvShTFuRCjyNekdHy7MfiF5oU9nMdZtG0J92VzgzY/GoMh7\nc+q9sduL2fwc1+1Bs9DWPaPkRF1J2NZuBPGM8zf24VzLSH4MSBUECt8b5gJK4aQ/\nqB1wpx370JtplWO4mxwnvIet+xrU78GjqHAt74HaX4BeFx91+zHoZEFWCa+cKZf6\n7bFP4+NpAgMBAAECggEACVjv9yKEtQfS2Fl5ufZCnSk279JXaEP0a6IP87Y/i00x\nyjWEbvBtff038hS4wzoFE1vduaAwE47lJCJQjEFIuvQ5pqnmIfcCP1Y9+pqYf159\nT+7uNN1AWryvIJFGy5roV4jTsd+p2qkJ0FEMwf84Yz5w9sZ9MHMNtEGgTehSbXEo\nYRceMqz+DtbjEl5dHt5aLxrhembUDB1kbIaSzd5Up15oSfevQxq9QQE76905XijS\nj+2O0K+BPC2Nw15x5z2cQ6PashQix4Z9eKHDheMXhBFxpVTO72oSyCik274p92h8\nCvvg1Pt+M7hL3AuKaTKbMQ+vzDyUrVnBMOXAfkIyQQKBgQD1XCjebwIRh52ArYzu\nDQhVzpYHMAfu8mme3RL1ANxlb9T421qC92nQ4CFv6C1lCwxaQ36Co0mV14MdD3G+\ngeDin/6C+QO1JNg+EpMqsyPBaIBvalfRErUpnhVVVJLHgBXOx3frdOKYAV/6HSnz\n45zkgnit9dKjpEw4UhZYP3mkMQKBgQDeW4Y1IaohJhMiMff0x0BLoBKcsJxxaP5t\ntihgyqulbTD+acqb3st1rPMFFiBjqSmqXYuTt4nYp6Wt83twQvoClp+LY1VKBGSY\nhzBGiAXi3LOK6M0+6avdDcdYbpoAdKZX5nucjvxVAtsjAvNGUA/8He1HxYfJUE5u\nKaAkHhz8uQKBgHVFo1MNg9OVGjbSvLVbDUzV/OdakbAntUv1JoZr7uuc1BJN5akL\nUExBlDnEo03URgcuk10lZppz83sEUr1XnoEzL5ayJo+CGMkyX5zdGo3qwNh/35FS\ne7x0joXGcpFgKww2Up77swIsRg9puQ+VDvw5UCz1fcQxVyzkL0HmtOFBAoGAf09h\nyPvsX6xgGh0H/fMzIdmVrncEK37U5dX8ymZf3ohlG9VQduwaC9cpEUl44/bP70Y+\nCyZz20Mpfi5BB6ahZGf/ExydkZJwUlBc2JU64YhBmA/wq8u4ZglkkIJK1GX1c7B4\nJ8xKNxY6h5JB3YkrjctItuYm96FuNm7IzMUdDakCgYEA6FFMfzqtsuvr9aUFAtJF\nyCC03JCuhYTlWhv/aP0oe1PYkRQKLdVX7UGXhp6Hw61evMt3UHbatXFX/s/v66MF\netmb3T5sOLXjRoTbmMRh1XHCbTuvanvJhOw3569SVSuTzNS8nZlgy/pj4vFPBFYC\ncQtYyfJ3tdCHKcggw/McvOs=\n-----END PRIVATE KEY-----\n",
+        "private_key": f"-----BEGIN PRIVATE KEY-----\n{os.environ.get['PRIVATE_KEY']}\nPLM7lHi2Xo7i+CloZ8KOzwaS0KV+3xdtwFUDOIXO3BVLQdror6ouWlAw08TCtFC/\ns9II6ugraSWUZxV/O1qKxHca45meUXd/AzJusQA0JOmW+k7Ocm7Ym27HzTccXPi7\n7MABSsOKzBpiWa8HqeOKPk1yjupy8AzLa5OH9YaY0Dyq1aKj7N3Su6MhRu+ucUUm\nfifwTlUXTEWeJHtYvKj/Utr6ViZZG4s8ghozI7ShebBACzS5K1Vomlvb4rISVFt0\nhxMvujZaWDtRG17PEQLR8dzzExV8ZSbO60WrV9EycJEen6c2FeYjM6Nbi6X7/pzN\nUTYotzzbAgMBAAECggEAHGKdG6d3848UEqCNNM1yHZAnu5v+QeiMQmPOekfLiV3i\nQG5c1b4Twqs6H7zU1jZNv07sdEGxydIa75Jvr0uxRuu3FnCPogrl3bpVxFzVTnEZ\nUirLnY+h1AnMcD13g/3g5LbespsyT0ZGssNTUGoHHaSAeCDdvvQYyLiJMGekvy/P\n/6/01LIbb+Kdc0Gx544xn/FoSpezvh7t0EqbWSM1Nptz+WGRQ5LPBRVEBrc5QcPe\npctBeSweMhvSuycWlG2tmhofgu0T30wYPgeyPP2+uzBH6+3HaqaRD6mucxq/L0hB\nkcx1kvpviLNUM+gLFwTWUfO80ObeIaSsbNrBkVzjYQKBgQDSn9RhUOrK/UZJzXN6\nEVjwx3rFKVwPLuag2YiHuWdTnQswGeJJjIDh2mcldHWn6MGSuZu6FdP+rSbcf1xw\nzRDVnaPQuVnT1GjIPKPtglCkxeU70lx/0lTX75dCquDmqZXMVkf46pvDQGdrBpCF\ngyhRvKIHfevznI1G6qwKFH1JeQKBgQC6CIrtMuTRDMXIHAr5qPHXmVKjqn1tKStF\nEe6ZL07WzsmEoKlDbLCqSkfQvJ1NrZ8Bs68UUhqaZjCaZgf+cg8VF5icTNvhuv4/\nIdCFlXwxuTQ08tnuBGb+paJ3o0oauo6hPenfyN1dii1GIDnz7XwbJTAc7SzMGeAq\n7TxwHC238wKBgCC2qGLxEXazve4Klgv4k8raAMyMrvrAuxtyjg0ek9jdxHYVHxtz\nUjVCGdEsdHW+5gnnADP33fRpambG9VGj2CCFmoL5tuT60cd/+6oRGnttLTyMYMeN\noJXlZaX6KnJJFrYlFIqpzcWWxDlQTLQf+ewwEy58tWAiCaNhIZVzNz5pAoGAJ7qj\nULzJuQttQasbfO3jmBOaXnGOj713DC0kM3qy75UB3F0jSM7xe6yZYa6mOWyWxJpH\nDaPrIoYoYxDfLCvXpL2BTf/sBW0V1w21ppGiEExpJdWnTPmLtV5SMBKjRMoKo8zB\nIZWYEN3thUhkl/9jvbhXahYMtxnfkctQWPDropkCgYBKqYctlRbQjNbs5tODL1CY\nZ8ittP1q9WGG49KvqyavfKXnFvdMT8YBbxgb9HXm2udOVoilCT0O/kWo5mqXa0G3\ndzCEgsC+0IIelp8gxkp+NDt68Aj30FAxRA995ypHIz0ZaRB2d+KA1XIYuzWTkuf6\nQ7zSmByx8VarrC2lwWSgHA==\n-----END PRIVATE KEY-----\n",
         "client_email": os.environ.get('CLIENT_EMAIL'),
         "client_id": os.environ.get('CLIENT_ID'),
         "auth_uri": os.environ.get('AUTH_URI'),
@@ -127,20 +127,18 @@ def submit_testimonial():
 
 @app.route('/api/getData', methods=['GET'])
 def get_data():
-    # # Récupérez les données de Firestore
-    # data_ref = db.collection('testimonials')
-    # data = data_ref.get()
+    
+    # Récupérez les données de Firestore
+    data_ref = db.collection('testimonials')
+    data = data_ref.get()
 
-    # # Transformez les données en format JSON
-    # result = [item.to_dict() for item in data]
+    # Transformez les données en format JSON
+    result = [item.to_dict() for item in data]
 
-    # print("----")
-    # print(result)
+    print("----")
+    print(result)
 
-    # return jsonify(result), 200
-
-    return "TESTTT"
-
+    return jsonify(result), 200
 
 if __name__ == '__main__':
     # app.run(debug=True) # Si pas docker
