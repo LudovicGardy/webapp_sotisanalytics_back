@@ -65,7 +65,7 @@ CORS(app)  # Cette ligne est importante pour permettre à notre serveur d'accept
 
 @app.route('/', methods=['GET'])
 def hello():
-    return "Hello World :-)"
+    return "Hello World !"
 
 def check_origin(origin):
     # Liste des origines autorisées
