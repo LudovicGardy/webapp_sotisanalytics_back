@@ -26,7 +26,7 @@ def firebase_credentials():
     
     # List of required keys in lowercase
     keys_list = [
-        'project_id', 'private_key_id', 'private_key', 'client_email',
+        'type', 'project_id', 'private_key_id', 'private_key', 'client_email',
         'client_id', 'auth_uri', 'token_uri', 'auth_provider_x509_cert_url',
         'client_x509_cert_url'
     ]
