@@ -20,7 +20,7 @@ app = Flask(__name__)
 ### Cross-origin
 CORS(app) # This line is important to allow our server to accept cross-origin requests
 # CORS(app, origins=['http://localhost:3000']) # Limit the cross-origin requests to the specified origins, which can be a good practice for security once you have deployed your app in production.
-
+# CORS(app, resources={r"/*": {"origins": "*"}}) # Allow all origins    
 
 ### Connexion to the backend might not work if you run the react app in localhost.
 ### But once deployed, it works.
@@ -43,21 +43,21 @@ def check_origin(origin):
 
     # Check if the origin is allowed
     if origin in allowed_origins or platform.node() == "MacBookPro-LudovicGardy.local":
-        allow = True
+        allow_connection = True
         print(f"Success: <{origin}>.")
     else:
-        allow = False
+        allow_connection = False
         print(f"Origin not allowed: <{origin}>. \nProcess aborted.")
 
-    return(allow)
+    return(allow_connection)
 
 @app.route('/api/submitTestimonial', methods=['POST'])
 def submit_testimonial():
 
     # Get the origin of the request
     origin = request.headers.get('Origin')
-    allow = check_origin(origin)
-    if not allow:
+    allow_connection = check_origin(origin)
+    if not allow_connection:
         abort(403) # Forbidden
 
     data = request.get_json()

@@ -39,7 +39,7 @@ def firebase_credentials():
         for key in keys_list:
             value = env_variables.get(key.upper())
             if not value:
-                raise ValueError(f'Missing or empty value for key: {key}')
+                raise ValueError(f'Missing or empty value for key: {key.upper()}')
             cred_dict[key] = value
 
         # Add prefix and suffix for the private_key
