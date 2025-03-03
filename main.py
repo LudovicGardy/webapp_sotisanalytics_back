@@ -38,7 +38,8 @@ def check_origin(origin):
         "http://www.sotisanalytics.fr",
         "https://www.sotisanalytics.fr",
         "http://sotisanalytics.fr",
-        "https://sotisanalytics.fr"
+        "https://sotisanalytics.fr",
+        "https://back.sotisai.com"
     ]
 
     # Check if the origin is allowed
