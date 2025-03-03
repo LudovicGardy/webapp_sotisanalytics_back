@@ -93,6 +93,5 @@ def get_data():
     return jsonify(result), 200
 
 if __name__ == '__main__':
-    # Pour exécution locale
-    # app.run(host='0.0.0.0', port=8000, debug=True)
-    app.run(port=8000, debug=True)
+    # Pour exécution locale ou Dockerisée
+    app.run(host='0.0.0.0', port=8000, debug=True)

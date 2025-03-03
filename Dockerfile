@@ -1,6 +1,9 @@
 # Utiliser une image Python de base (3.9-slim-buster)
 FROM python:3.9-slim-buster
 
+# Installer curl pour la commande HEALTHCHECK
+RUN apt-get update && apt-get install -y curl
+
 # Définir le dossier de travail
 WORKDIR /app
 
