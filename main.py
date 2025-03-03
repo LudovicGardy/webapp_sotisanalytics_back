@@ -1,7 +1,5 @@
-#conda activate flask_env
 import numpy
 import platform
-
 from flask import Flask, request, jsonify, abort
 from flask_cors import CORS
 from firebase_admin import credentials, initialize_app, firestore
@@ -10,26 +8,27 @@ from datetime import datetime
 from modules.config import firebase_credentials
 firebase_cred = firebase_credentials()
 cred = credentials.Certificate(firebase_cred)
-# cred = credentials.Certificate('firestore-key.json')
+# Alternative: cred = credentials.Certificate('firestore-key.json')
 
-# App initialization
+# Initialisation de l'application Firebase
 initialize_app(cred)
 db = firestore.client()
+
+# Initialisation de l'application Flask
 app = Flask(__name__)
+CORS(app)  # Autoriser les requêtes cross-origin
 
-### Cross-origin
-CORS(app) # This line is important to allow our server to accept cross-origin requests
-# CORS(app, origins=['http://localhost:3000']) # Limit the cross-origin requests to the specified origins, which can be a good practice for security once you have deployed your app in production.
-# CORS(app, resources={r"/*": {"origins": "*"}}) # Allow all origins    
+# Endpoint pour le healthcheck
+@app.route('/health', methods=['GET'])
+def health_check():
+    return jsonify({"status": "healthy"}), 200
 
-### Connexion to the backend might not work if you run the react app in localhost.
-### But once deployed, it works.
 @app.route('/', methods=['GET'])
 def hello():
     return "Hello World !"
 
 def check_origin(origin):
-    # List of allowed origins
+    # Liste des origines autorisées
     allowed_origins = [
         "http://www.sotisanalytics.com",
         "https://www.sotisanalytics.com",
@@ -41,38 +40,32 @@ def check_origin(origin):
         "https://sotisanalytics.fr",
         "https://back.sotisai.com"
     ]
-
-    # Check if the origin is allowed
     if origin in allowed_origins or platform.node() == "MacBookPro-LudovicGardy.local":
-        allow_connection = True
         print(f"Success: <{origin}>.")
+        return True
     else:
-        allow_connection = False
         print(f"Origin not allowed: <{origin}>. \nProcess aborted.")
-
-    return(allow_connection)
+        return False
 
 @app.route('/api/submitTestimonial', methods=['POST'])
 def submit_testimonial():
-
-    # Get the origin of the request
+    # Récupérer l'origine de la requête
     origin = request.headers.get('Origin')
-    allow_connection = check_origin(origin)
-    if not allow_connection:
-        abort(403) # Forbidden
+    if not check_origin(origin):
+        abort(403)  # Accès refusé
 
     data = request.get_json()
     name = data["name"]
     email = data["email"]
     comment = data["comment"]
 
-    # Get the current date and time
+    # Récupérer la date et l'heure actuelles
     date_hour = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
-    # Create a reference to the document
+    # Référence au document
     doc_ref = db.collection('testimonials_submited').document(date_hour)
 
-    # Add data to the document
+    # Enregistrement des données dans Firestore
     doc_ref.set({
         'name': name,
         'email': email,
@@ -89,22 +82,17 @@ def submit_testimonial():
 
 @app.route('/api/getData', methods=['GET'])
 def get_data():
-    
-    # Get data from the database
+    # Récupérer les données depuis Firestore
     data_ref = db.collection('testimonials')
     data = data_ref.get()
 
-    # Transform data into a list of dictionaries
+    # Transformer les données en liste de dictionnaires
     result = [item.to_dict() for item in data]
-
     print("----")
     print(result)
-
     return jsonify(result), 200
 
 if __name__ == '__main__':
-    # app.run(debug=True) # Si pas docker
-
-    # This is used when running locally only. When deploying to Google App
-    # Engine, a webserver process such as Gunicorn will serve the app.
-    app.run(host='0.0.0.0', port=8000, debug=True) # If Dockerised
+    # Pour exécution locale
+    # app.run(host='0.0.0.0', port=8000, debug=True)
+    app.run(port=8000, debug=True)
