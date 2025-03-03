@@ -38,7 +38,14 @@ def check_origin(origin):
         "https://www.sotisanalytics.fr",
         "http://sotisanalytics.fr",
         "https://sotisanalytics.fr",
-        "https://back.sotisai.com"
+        "https://back.sotisai.com",
+        "https://www.sotisai.com",
+        "https://sotisai.com",
+        "http://sotisai.com",
+        "http://www.sotisai.com",
+        "http://localhost:3000",
+        "http://localhost:8000",
+        "http://localhost:8080"
     ]
     if origin in allowed_origins or platform.node() == "MacBookPro-LudovicGardy.local":
         print(f"Success: <{origin}>.")
